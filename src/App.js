@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
-
+import details from './data/data.json'
+import { useEffect, useState } from 'react';
+import Camplist from './Components/Camplist/Camplist';
+import Teamlist from './Components/Teamlist/Teamlist';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Budget from './Components/Budget/Budget';
 function App() {
+  const [player, setPlayer] = useState([]);
+  const [teamPlayer, setTeamPlayer] = useState([]);
+  useEffect(()=>{
+    setPlayer(details);
+  },[])
+  const playerSelection = (selected) => {
+    const teamMember = [...teamPlayer, selected];
+    setTeamPlayer(teamMember);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <Budget total = {teamPlayer}></Budget>
+        {
+          teamPlayer.map(selectedPlayer => <Teamlist name = {selectedPlayer.name} salary = {selectedPlayer.salary}key = {selectedPlayer.id}></Teamlist>)
+        }
+      <div className = "players-list">
+        {
+        player.map(individual => <Camplist 
+          information = {individual} key = {individual.id} 
+          selection = {playerSelection}></Camplist>)
+        }
+      </div>
+      
     </div>
   );
 }
