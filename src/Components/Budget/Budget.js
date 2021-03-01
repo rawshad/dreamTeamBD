@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Budget.css';
 const Budget = (props) => {
     const total = props.total;
     let totalBudget = 0;

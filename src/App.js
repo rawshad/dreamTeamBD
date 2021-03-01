@@ -16,13 +16,15 @@ function App() {
     setTeamPlayer(teamMember);
   }
   return (
-    <div className="main">
-      <Budget total = {teamPlayer}></Budget>
+    <div className="main container">
+      <div className="bg-dark">
+        <Budget total = {teamPlayer}></Budget>
         {
-          teamPlayer.map(selectedPlayer => <Teamlist name = {selectedPlayer.name} salary = {selectedPlayer.salary}key = {selectedPlayer.id}></Teamlist>)
+          teamPlayer.map(selectedPlayer => <Teamlist name = {selectedPlayer.name} salary = {selectedPlayer.salary} id = {selectedPlayer.id} key = {selectedPlayer.id}></Teamlist>)
         }
-      <div className = "players-list">
-        {
+      </div>
+      <div className="row">
+      {
         player.map(individual => <Camplist 
           information = {individual} key = {individual.id} 
           selection = {playerSelection}></Camplist>)
