@@ -5,8 +5,9 @@ const Teamlist = (props) => {
     return (
         <div className="team-selection mb-5">
             <div className="profile-summary">
-                <h1>Selected Player : {props.name}</h1>
-                <h3>Salary : {props.salary} Taka</h3>
+                <h3>Selected Player :<br></br> {props.name}</h3>
+                <br></br>
+                <h4>Salary : {props.salary} Taka</h4>
             </div>
         </div>
     );
