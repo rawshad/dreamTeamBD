@@ -16,8 +16,9 @@ function App() {
     setTeamPlayer(teamMember);
   }
   return (
-    <div className="main container">
-      <div className="bg-dark">
+    <div className="main container-fluid">
+      <h1 className="logo text-center pt-5">DR<span>EAM</span> T<span>EAM</span> BD</h1>
+      <div className="">
         <Budget total = {teamPlayer}></Budget>
         {
           teamPlayer.map(selectedPlayer => <Teamlist name = {selectedPlayer.name} salary = {selectedPlayer.salary} id = {selectedPlayer.id} key = {selectedPlayer.id}></Teamlist>)

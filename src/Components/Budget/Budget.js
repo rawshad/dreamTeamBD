@@ -8,7 +8,7 @@ const Budget = (props) => {
         totalBudget = totalBudget + price.salary; 
     }
     return (
-        <div>
+        <div className="mb-5 pt-5">
             <h1>Total Budget : {totalBudget}</h1>
             <h2>Total Selected Player : {total.length}</h2>
         </div>

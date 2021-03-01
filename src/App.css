@@ -1,11 +1,13 @@
 .main {
-  
+ background: green; 
 }
-/* 
-.players-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 0 auto;
-} */
 
+.logo {
+  font-size: 65px;
+  text-decoration: underline;
+  color: white;
+}
+
+.logo span {
+  color: red;
+}
