@@ -1,3 +1,15 @@
+
+# DreamTeamBD (Make your own team) - React Project
+
+1. The list of players will be in the form of cards.
+2. There will be realistic pictures, names, salaries as information of the players.
+3. Each player card will have a button, which can be clicked to select for the club.
+4. Total number of players selected, their names, everyone's salary will show in the total budget.
+5. Fake Data has been created and used with "useEffect".
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
